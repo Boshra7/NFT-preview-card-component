@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: hsl(217, 54%, 11%);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      padding: 20px 20px 10px 20px;
+      width: 290px;
+      height: 550px;
+      background-color: hsl(216, 50%, 16%);
+      border-radius: 9px;
+      box-shadow: 0px 20px 1px 20px hsl(215deg 49% 12%), -20px 20px 1px 0px hsl(215deg 49% 12%);
+    }
+
+    .equilibrium {
+      width: 100%;
+      height: auto;
+      border-radius: 9px;
+
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .overlay {
+      border-radius: 9px;
+      width: 290px;
+      height: 290px;
+      background-color: hsla(178, 100%, 50%, 0.418);
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+
+    .equilibrium:active+.overlay {
+      display: flex;
+    }
+
+    h3 {
+      color: hsl(0, 0%, 100%);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      color: hsl(215, 51%, 70%);
+      margin-bottom: 20px;
+    }
+
+    .Numbers {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 30px;
+      border-bottom: thin solid hsl(215, 32%, 27%);
+
+    }
+
+    @media screen and (max-width:557px) {
+      .Numbers {
+        padding-bottom: 15px;
+      }
+    }
+
+    .pe-2 {
+      padding-right: 7px;
+    }
+
+    .ethereum {
+      color: hsl(178, 100%, 50%);
+      font-weight: 400;
+    }
+
+    .clock {
+      color: hsl(215, 51%, 70%);
+      font-weight: 600;
+
+    }
+
+    .Creation {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid hsl(0, 0%, 100%);
+      margin-right: 16px;
+    }
+
+    .Jules {
+      color: hsl(0, 0%, 100%);
+    }
+
+    .Jules:active {
+      color: hsl(178, 100%, 50%);
+    }
+
+    .description {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      color: hsl(215, 51%, 70%);
+    }
+
+    .equilibrium34:active {
+      color: hsl(178, 100%, 50%);
+    }
+
+    .daysleft,
+    .ETH {
+      vertical-align: top;
+    }
+    .attribution{
+      color: #fff;
+      position: fixed;
+      bottom: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="relative">
+      <img src="./images/image-equilibrium.jpg" class="equilibrium">
+      <div class="overlay">
+        <img src="./images/icon-view.svg">
+      </div>
+    </div>
+
+    <h3 class="equilibrium34">Equilibrium #3429</h3>
+
+    <p>Our Equilibrium collection promotes balance and calm.</p>
+    <div class="Numbers">
+      <div class="ethereum"><img src="./images/icon-ethereum.svg" class="icon-ethereum pe-2"><span class="ETH">0.041
+          ETH</span></div>
+      <div class="clock"><img src="./images/icon-clock.svg" class="icon-clock pe-2"><span class="daysleft">3 days
+          left</span></div>
+    </div>
+    <div class="Creation">
+
+      <img src="/images/image-avatar.png" class="avatar">
+      <span class="description"> Creation of&nbsp;<span class="Jules">Jules Wyvern</span></span>
+    </div>
+
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/Boshra7">Boshar</a>.
+  </div>
+</body>
+
+</html>
